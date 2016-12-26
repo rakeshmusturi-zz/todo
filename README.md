@@ -1,1 +1,1 @@
-# todo
+A To Do app to maintain tasks, make tasks, changes status to complete and pending, edit and also delete files using REACT JS E6
