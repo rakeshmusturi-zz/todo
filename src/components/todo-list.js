@@ -9,7 +9,7 @@ export default class TodosList extends React.Component {
         }
     render(){
         return(
-            <div className="">
+            <div>
             <TodosListHeader />
             <div className="items">
                 {this.returnItems()}

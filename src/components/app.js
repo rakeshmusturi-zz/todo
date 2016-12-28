@@ -2,6 +2,7 @@ import React from 'react';
 import CreateTodo from './create-todo';
 import TodosList from './todos-list';
 import TodosCompleteItem from './todo-complete-item';
+import ModalForm from './modal';
 
 export default class App extends React.Component {
     constructor(props) {
@@ -31,8 +32,10 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>To-Do App</h1>
-                <CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />
+                <h1 className="app-title">To-Do App</h1>
+                <ModalForm todos={this.state.todos} createTask={this.createTask.bind(this)} />
+                
+                {/*<CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />*/}
                 <TodosList
                     todos={this.state.todos}
                     toggleTask={this.toggleTask.bind(this)}
@@ -40,7 +43,7 @@ export default class App extends React.Component {
                     deleteTask={this.deleteTask.bind(this)}
                 />
                 <TodosCompleteItem todos={this.state.todos} callbackFunction={this.callBack.bind(this)} toggleTask={this.toggleTask.bind(this)}/>
-            </div>
+             </div>
         );
     }
 
