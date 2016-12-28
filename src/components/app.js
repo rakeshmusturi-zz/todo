@@ -32,7 +32,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div>
-                <h1 className="app-title">To-Do App</h1>
+                <h2 className="app-title">To-Do List</h2>
                 <ModalForm todos={this.state.todos} createTask={this.createTask.bind(this)} />
                 
                 {/*<CreateTodo todos={this.state.todos} createTask={this.createTask.bind(this)} />*/}
